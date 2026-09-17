@@ -115,7 +115,5 @@ func main() {
 	}
 
 	log.Printf("Server running on port %s", port)
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
-		log.Fatalf("Server failed: %v", err)
-	}
+	http.ListenAndServe(":"+port, nil)
 }
