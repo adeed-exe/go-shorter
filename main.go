@@ -109,7 +109,7 @@ func main() {
 	http.HandleFunc("/output", outputHandler)
 	http.HandleFunc("/", redirectHandler)
 
-	port := process.env.PORT
+	port := os.Getenv("PORT")
 	if port == "" {
 		port = "3000"
 	}
